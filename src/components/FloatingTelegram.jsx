@@ -14,10 +14,12 @@ export default function FloatingTelegram() {
       href={TELEGRAM_URL}
       target="_blank"
       rel="noopener noreferrer"
-      className="fixed bottom-6 right-6 z-50 flex items-center gap-3 px-5 py-3 rounded-xl bg-[#00ff66] text-black font-extrabold shadow-[0_0_25px_rgba(0,255,102,0.8)] border-2 border-black hover:scale-105 transition-transform"
+      className="fixed bottom-5 right-4 z-50 flex items-center gap-2 px-4 py-2.5 sm:px-5 sm:py-3 rounded-xl bg-[#00ff66] text-black font-extrabold shadow-[0_0_25px_rgba(0,255,102,0.8)] border-2 border-black hover:scale-105 transition-transform"
     >
-      <TelegramIcon className="w-5 h-5 fill-black" />
-      <span className="text-xs font-black tracking-tight text-black">Join @{TELEGRAM_USERNAME}</span>
+      <TelegramIcon className="w-4 h-4 sm:w-5 sm:h-5 fill-black shrink-0" />
+      <span className="text-xs sm:text-sm font-black tracking-tight text-black whitespace-nowrap">
+        @{TELEGRAM_USERNAME}
+      </span>
     </a>
   );
 }

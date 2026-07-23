@@ -95,7 +95,7 @@ export default function Background() {
       </svg>
 
       {/* Base */}
-      <div className="absolute inset-0 bg-[#000000]" />
+      <div className="absolute inset-0 bg-[#010f04]" />
 
       {/* Subtle blurred grid pattern */}
       <div

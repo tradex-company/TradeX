@@ -1,13 +1,13 @@
 import { motion } from "framer-motion";
 import Logo from "./Logo";
-import { TELEGRAM_USERNAME, HIGHLIGHT_QUOTE, GUARANTEE_TEXT } from "../constants";
+import { HIGHLIGHT_QUOTE, GUARANTEE_TEXT } from "../constants";
 import { ShieldCheck, Quote } from "lucide-react";
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center pt-28 pb-16 px-4 sm:px-6 lg:px-8 bg-[#000000] overflow-hidden">
+    <section className="relative min-h-screen flex items-center justify-center py-16 px-4 sm:px-6 lg:px-8 bg-[#000000] overflow-hidden">
 
-      {/* Clean static background — subtle green grid lines only */}
+      {/* Subtle static grid background */}
       <div
         className="absolute inset-0 pointer-events-none z-0"
         style={{
@@ -18,17 +18,6 @@ export default function Hero() {
       />
 
       <div className="relative z-10 max-w-4xl mx-auto flex flex-col items-center text-center">
-
-        {/* Telegram Username Badge */}
-        <motion.div
-          initial={{ opacity: 0, y: -15 }}
-          animate={{ opacity: 1, y: 0 }}
-          className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-[#0a1a0f] border-2 border-[#00ff66] text-sm mb-6"
-        >
-          <span className="w-2.5 h-2.5 rounded-full bg-[#00ff66]" />
-          <span className="text-white font-bold">Official Telegram:</span>
-          <span className="text-[#00ff66] font-extrabold text-base">@{TELEGRAM_USERNAME}</span>
-        </motion.div>
 
         {/* Logo */}
         <motion.div

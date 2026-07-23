@@ -17,10 +17,10 @@ export default function TelegramButton({
 }) {
   const sizing =
     size === "lg"
-      ? "px-8 py-4 text-lg gap-3"
+      ? "px-5 py-3 text-sm sm:px-8 sm:py-4 sm:text-lg gap-2 sm:gap-3"
       : size === "xl"
-      ? "px-10 py-5 text-xl gap-4"
-      : "px-6 py-3 text-base gap-2";
+      ? "px-6 py-3 text-sm sm:px-10 sm:py-5 sm:text-xl gap-2 sm:gap-4"
+      : "px-4 py-2.5 text-xs sm:px-6 sm:py-3 sm:text-base gap-2";
 
   return (
     <motion.a
@@ -31,8 +31,8 @@ export default function TelegramButton({
       whileTap={{ scale: 0.96 }}
       className={`inline-flex ${fullWidth ? "w-full justify-center" : ""} items-center ${sizing} rounded-xl font-extrabold text-black bg-[#00ff66] hover:bg-[#10b981] shadow-[0_0_25px_rgba(0,255,102,0.5)] transition-all duration-200 cursor-pointer border-2 border-[#00ff66] ${className}`}
     >
-      <TelegramIcon className="w-6 h-6 shrink-0 fill-black text-black" />
-      <span className="tracking-tight text-black">{text}</span>
+      <TelegramIcon className="w-5 h-5 sm:w-6 sm:h-6 shrink-0 fill-black text-black" />
+      <span className="tracking-tight text-black whitespace-nowrap">{text}</span>
     </motion.a>
   );
 }

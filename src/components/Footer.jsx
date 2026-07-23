@@ -3,7 +3,7 @@ import { TELEGRAM_USERNAME, TELEGRAM_URL, HIGHLIGHT_QUOTE, GUARANTEE_TEXT } from
 
 export default function Footer() {
   return (
-    <footer className="py-8 sm:py-10 md:py-12 px-4 sm:px-6 lg:px-8 bg-[#000000] border-t border-[#00ff66]/20 text-gray-300 text-xs sm:text-sm shadow-[0_-1px_30px_rgba(0,255,102,0.15)]">
+    <footer className="py-8 sm:py-10 md:py-12 px-4 sm:px-6 lg:px-8 bg-[#010f04] border-t border-[#00ff66]/20 text-gray-300 text-xs sm:text-sm shadow-[0_-1px_30px_rgba(0,255,102,0.15)]">
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4 sm:gap-6 text-center md:text-left">
         <div>
           <Logo size={32} showWordmark={true} />
