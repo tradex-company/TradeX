@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import Logo from "./Logo";
-import { HIGHLIGHT_QUOTE, GUARANTEE_TEXT } from "../constants";
+import TelegramButton from "./TelegramButton";
+import { HIGHLIGHT_QUOTE, GUARANTEE_TEXT, TELEGRAM_USERNAME } from "../constants";
 import { ShieldCheck, Quote } from "lucide-react";
 
 export default function Hero() {
@@ -46,15 +47,28 @@ export default function Hero() {
           Institutional Forex, Gold & Crypto Signals Delivered Daily.
         </motion.p>
 
+        {/* HIGHLIGHTED HERO TELEGRAM JOIN BUTTON */}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.9, y: 15 }}
+          animate={{ opacity: 1, scale: 1, y: 0 }}
+          transition={{ delay: 0.15 }}
+          className="mt-6"
+        >
+          <TelegramButton
+            size="xl"
+            text={`Join @${TELEGRAM_USERNAME} on Telegram`}
+          />
+        </motion.div>
+
         {/* QUOTE HIGHLIGHT */}
         <motion.div
           initial={{ opacity: 0, y: 25 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.2 }}
+          transition={{ delay: 0.25 }}
           className="mt-8 w-full max-w-3xl bg-[#080808] border-2 border-[#00ff66] rounded-2xl p-6 sm:p-8 text-left shadow-[0_0_30px_rgba(0,255,102,0.25)]"
         >
           <div className="flex items-start gap-4">
-            <div className="p-3 rounded-xl bg-[#00ff66] text-black shrink-0">
+            <div className="p-3 rounded-xl bg-[#00ff66] text-black shrink-0 font-black">
               <Quote className="w-6 h-6" />
             </div>
             <div>
@@ -72,7 +86,7 @@ export default function Hero() {
         <motion.div
           initial={{ opacity: 0, y: 25 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.3 }}
+          transition={{ delay: 0.35 }}
           className="mt-5 w-full max-w-3xl bg-[#05150a] border-2 border-[#00ff66] rounded-2xl p-6 sm:p-8 text-left shadow-[0_0_30px_rgba(0,255,102,0.3)]"
         >
           <div className="flex flex-col sm:flex-row items-center justify-between gap-6">
