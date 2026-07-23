@@ -24,7 +24,7 @@ function CandlestickRow() {
     <svg
       viewBox="0 0 100 100"
       preserveAspectRatio="none"
-      className="absolute inset-x-0 bottom-0 h-[38%] w-full opacity-[0.16]"
+      className="absolute inset-x-0 bottom-0 h-[38%] w-full opacity-[0.08] blur-[1px]"
       aria-hidden="true"
     >
       {CANDLES.map((c, i) => {
@@ -60,7 +60,7 @@ function Sparkline({ className, d, duration = 3 }) {
   return (
     <svg
       viewBox="0 0 120 40"
-      className={className}
+      className={`${className} blur-[0.5px]`}
       aria-hidden="true"
     >
       <motion.path
@@ -69,8 +69,8 @@ function Sparkline({ className, d, duration = 3 }) {
         stroke="url(#spark-grad)"
         strokeWidth="2"
         strokeLinecap="round"
-        initial={{ pathLength: 0, opacity: 0.2 }}
-        animate={{ pathLength: 1, opacity: 0.8 }}
+        initial={{ pathLength: 0, opacity: 0.04 }}
+        animate={{ pathLength: 1, opacity: 0.12 }}
         transition={{
           duration,
           repeat: Infinity,
@@ -94,12 +94,12 @@ export default function Background() {
         </defs>
       </svg>
 
-      {/* base */}
-      <div className="absolute inset-0 bg-[#05070d]" />
+      {/* Base */}
+      <div className="absolute inset-0 bg-[#000000]" />
 
-      {/* grid pattern */}
+      {/* Subtle blurred grid pattern */}
       <div
-        className="absolute inset-0 opacity-[0.15] animate-grid-pan"
+        className="absolute inset-0 opacity-[0.06] blur-[1px]"
         style={{
           backgroundImage:
             "linear-gradient(to right, rgba(148,163,184,0.15) 1px, transparent 1px), linear-gradient(to bottom, rgba(148,163,184,0.15) 1px, transparent 1px)",
@@ -107,52 +107,27 @@ export default function Background() {
         }}
       />
 
-      {/* blurred gradient blobs */}
-      <div className="absolute -top-40 -left-32 w-[32rem] h-[32rem] rounded-full bg-blue-500/25 blur-[110px] animate-drift" />
-      <div className="absolute top-1/3 -right-40 w-[36rem] h-[36rem] rounded-full bg-emerald-500/20 blur-[120px] animate-drift-reverse" />
-      <div className="absolute bottom-[-10rem] left-1/4 w-[28rem] h-[28rem] rounded-full bg-blue-500/15 blur-[100px] animate-float-slow" />
+      {/* Subtle blurred gradient blobs */}
+      <div className="absolute -top-40 -left-32 w-[32rem] h-[32rem] rounded-full bg-blue-500/08 blur-[130px]" />
+      <div className="absolute top-1/3 -right-40 w-[36rem] h-[36rem] rounded-full bg-emerald-500/06 blur-[140px]" />
+      <div className="absolute bottom-[-10rem] left-1/4 w-[28rem] h-[28rem] rounded-full bg-blue-500/05 blur-[120px]" />
 
-      {/* radial vignette to keep edges dark/premium */}
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_35%,#05070d_88%)]" />
+      {/* Radial vignette */}
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_35%,#000000_88%)]" />
 
-      {/* floating glowing particles */}
-      {[
-        { top: "18%", left: "12%", size: 8, delay: 0, hex: "#60a5fa" },
-        { top: "28%", left: "82%", size: 6, delay: 0.6, hex: "#34d399" },
-        { top: "62%", left: "20%", size: 5, delay: 1.1, hex: "#34d399" },
-        { top: "48%", left: "70%", size: 7, delay: 0.3, hex: "#60a5fa" },
-        { top: "75%", left: "88%", size: 5, delay: 0.9, hex: "#60a5fa" },
-        { top: "12%", left: "55%", size: 4, delay: 1.4, hex: "#34d399" },
-      ].map((p, i) => (
-        <span
-          key={i}
-          className="absolute rounded-full animate-float"
-          style={{
-            top: p.top,
-            left: p.left,
-            width: p.size,
-            height: p.size,
-            backgroundColor: p.hex,
-            animationDelay: `${p.delay}s`,
-            boxShadow: `0 0 12px 3px ${p.hex}`,
-            opacity: 0.7,
-          }}
-        />
-      ))}
-
-      {/* small animated sparkline charts tucked in corners */}
+      {/* Very subtle animated sparkline charts */}
       <Sparkline
-        className="absolute top-[14%] right-[8%] w-28 h-9 opacity-70"
+        className="absolute top-[14%] right-[8%] w-28 h-9 opacity-[0.08]"
         d="M2,30 L18,22 L34,26 L50,14 L66,18 L82,6 L100,10"
         duration={3.2}
       />
       <Sparkline
-        className="absolute bottom-[30%] left-[6%] w-24 h-8 opacity-60"
+        className="absolute bottom-[30%] left-[6%] w-24 h-8 opacity-[0.08]"
         d="M2,20 L16,26 L30,16 L44,22 L58,8 L72,14 L100,4"
         duration={4}
       />
 
-      {/* candlestick silhouette along the bottom */}
+      {/* Candlestick silhouette along the bottom */}
       <CandlestickRow />
     </div>
   );

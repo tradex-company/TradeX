@@ -1,100 +1,56 @@
-import { motion } from "framer-motion";
-import { LineChart, ShieldCheck, Users, Signal } from "lucide-react";
+import { Signal, ShieldCheck, LineChart, Users } from "lucide-react";
+import { TELEGRAM_USERNAME, GUARANTEE_TEXT } from "../constants";
 
 const FEATURES = [
   {
     icon: Signal,
-    title: "Daily Signals",
-    description:
-      "Curated Forex, Crypto & Gold entries delivered straight to your Telegram, every trading day.",
+    title: "Daily VIP Signals",
+    desc: `Real-time Forex, Gold & Crypto entries posted directly to Telegram @${TELEGRAM_USERNAME} with exact entry, TP, and SL targets.`,
+  },
+  {
+    icon: ShieldCheck,
+    title: "30-Day Full Refund",
+    desc: GUARANTEE_TEXT,
   },
   {
     icon: LineChart,
     title: "Market Analysis",
-    description:
-      "In-depth technical breakdowns and macro context so you understand every call we make.",
-  },
-  {
-    icon: ShieldCheck,
-    title: "Risk Management",
-    description:
-      "Clear stop-loss and position sizing guidance built to protect your capital first.",
+    desc: "In-depth technical market structure and institutional order flow breakdowns with every call.",
   },
   {
     icon: Users,
-    title: "Trading Community",
-    description:
-      "Join thousands of traders sharing insights, wins, and lessons in real time.",
+    title: "Active Community",
+    desc: "Over 14,200 traders getting verified signal notifications daily.",
   },
 ];
 
-const container = {
-  hidden: {},
-  show: {
-    transition: { staggerChildren: 0.12 },
-  },
-};
-
-const item = {
-  hidden: { opacity: 0, y: 30 },
-  show: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
-};
-
 export default function Features() {
   return (
-    <section className="relative py-24 px-6">
+    <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 lg:px-8 bg-[#000000] border-t border-[#00ff66]/20 shadow-[0_0_30px_rgba(0,255,102,0.15)]">
       <div className="max-w-6xl mx-auto">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.4 }}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-16"
-        >
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
-            Everything you need to{" "}
-            <span className="bg-gradient-to-r from-blue-400 to-emerald-400 bg-clip-text text-transparent">
-              trade with confidence
-            </span>
+        <div className="text-center mb-8 sm:mb-12">
+          <h2 className="text-2xl sm:text-4xl md:text-5xl font-black text-white px-2">
+            Why Choose <span className="text-[#00ff66]">TradeX</span>
           </h2>
-        </motion.div>
+          <p className="text-sm sm:text-base text-gray-400 text-center mt-2 font-bold px-2">
+            Official Telegram: <span className="text-[#00ff66]">@{TELEGRAM_USERNAME}</span>
+          </p>
+        </div>
 
-        <motion.div
-          variants={container}
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true, amount: 0.2 }}
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"
-        >
-          {FEATURES.map(({ icon: Icon, title, description }) => (
-            <motion.div
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 md:gap-6">
+          {FEATURES.map(({ icon: Icon, title, desc }) => (
+            <div
               key={title}
-              variants={item}
-              whileHover={{ y: -8 }}
-              className="group relative rounded-2xl p-6 bg-white/[0.04] border border-white/10 backdrop-blur-xl
-                shadow-[0_8px_32px_rgba(0,0,0,0.35)]
-                transition-all duration-300
-                hover:border-emerald-400/40 hover:bg-white/[0.06]"
+              className="p-4 sm:p-5 md:p-6 rounded-2xl bg-[#080808] border-2 border-[#00ff66] shadow-[0_0_20px_rgba(0,255,102,0.2)] text-left hover:shadow-[0_0_30px_rgba(0,255,102,0.3)] transition-shadow duration-300"
             >
-              <div
-                className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
-                style={{
-                  background:
-                    "radial-gradient(120px circle at 50% 0%, rgba(16,185,129,0.18), transparent 70%)",
-                }}
-              />
-              <div className="relative flex items-center justify-center w-12 h-12 rounded-xl mb-5 bg-gradient-to-br from-blue-500/20 to-emerald-500/20 border border-white/10 group-hover:shadow-[0_0_20px_rgba(59,130,246,0.45)] transition-shadow duration-300">
-                <Icon className="w-6 h-6 text-emerald-400" strokeWidth={1.75} />
+              <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-[#00ff66] text-black flex items-center justify-center font-black mb-3 sm:mb-4">
+                <Icon className="w-5 h-5 sm:w-6 sm:h-6" />
               </div>
-              <h3 className="relative text-lg font-semibold text-white mb-2">
-                {title}
-              </h3>
-              <p className="relative text-sm text-slate-400 leading-relaxed">
-                {description}
-              </p>
-            </motion.div>
+              <h3 className="text-lg sm:text-xl font-black text-white mb-2">{title}</h3>
+              <p className="text-xs sm:text-sm text-gray-300 font-medium leading-relaxed">{desc}</p>
+            </div>
           ))}
-        </motion.div>
+        </div>
       </div>
     </section>
   );

@@ -1,17 +1,19 @@
+import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import Features from "./components/Features";
-import Stats from "./components/Stats";
 import CTA from "./components/CTA";
 import Footer from "./components/Footer";
+import FloatingTelegram from "./components/FloatingTelegram";
 
 export default function App() {
   return (
-    <div className="min-h-screen bg-[#05070d] text-white">
+    <div className="min-h-screen bg-[#000000] text-white selection:bg-[#00ff66] selection:text-black font-sans antialiased overflow-x-hidden">
+      <Navbar />
       <Hero />
       <Features />
-      <Stats />
       <CTA />
       <Footer />
+      <FloatingTelegram />
     </div>
   );
 }
