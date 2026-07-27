@@ -17,7 +17,7 @@ export default function QuoteSection() {
       goodItems: [
         "Strict 1-2% position sizing & institutional SL",
         "Full technical breakdown & chart analysis",
-        "Proven 95% verified win rate across 14,200+ pips",
+        "Proven 95% verified win rate across 7,600+ pips",
         "100% Full Refund if not profitable in 30 days",
       ],
     },
