@@ -1,5 +1,5 @@
 export const TELEGRAM_USERNAME = "Tradexbyabhi";
-export const DEFAULT_TELEGRAM_MESSAGE = "Hello @Tradexbyabhi, I want to join TradeX Exclusive Group!";
+export const DEFAULT_TELEGRAM_MESSAGE = "Hello, I want to join TradeX Exclusive Group!";
 export const TELEGRAM_URL = `https://t.me/${TELEGRAM_USERNAME}?text=${encodeURIComponent(DEFAULT_TELEGRAM_MESSAGE)}`;
 export const BRAND_NAME = "TradeX";
 export const TAGLINE = "Master the Market. Zero Risk.";

@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Quote, AlertTriangle, CheckCircle, XCircle, BookOpen, Sparkles } from "lucide-react";
-import { HIGHLIGHT_QUOTE, TELEGRAM_USERNAME } from "../constants";
+import { HIGHLIGHT_QUOTE } from "../constants";
 import TelegramButton from "./TelegramButton";
 
 export default function QuoteSection() {
@@ -13,7 +13,7 @@ export default function QuoteSection() {
         "Fake screenshot hype with no historical proof",
         "Zero money-back or refund accountability",
       ],
-      goodTitle: `TradeX Knowledge (@${TELEGRAM_USERNAME})`,
+      goodTitle: "TradeX Exclusive Group",
       goodItems: [
         "Strict 1-2% position sizing & institutional SL",
         "Full technical breakdown & chart analysis",
@@ -116,7 +116,7 @@ export default function QuoteSection() {
         <div className="text-center">
           <TelegramButton
             size="lg"
-            text={`Get Knowledge-Driven Signals @${TELEGRAM_USERNAME}`}
+            text="Get Knowledge-Driven Signals on TradeX"
           />
         </div>
 

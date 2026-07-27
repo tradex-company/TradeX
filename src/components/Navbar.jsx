@@ -1,5 +1,4 @@
 import Logo from "./Logo";
-import { TELEGRAM_USERNAME } from "../constants";
 import { ShieldCheck } from "lucide-react";
 
 export default function Navbar() {

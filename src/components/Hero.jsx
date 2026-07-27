@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import Logo from "./Logo";
 import TelegramButton from "./TelegramButton";
-import { HIGHLIGHT_QUOTE, GUARANTEE_TEXT, TELEGRAM_USERNAME } from "../constants";
+import { HIGHLIGHT_QUOTE, GUARANTEE_TEXT } from "../constants";
 import { ShieldCheck, Quote } from "lucide-react";
 
 export default function Hero() {
@@ -56,7 +56,7 @@ export default function Hero() {
         >
           <TelegramButton
             size="xl"
-            text={`Join @${TELEGRAM_USERNAME} on Telegram`}
+            text="Join TradeX on Telegram"
           />
         </motion.div>
 

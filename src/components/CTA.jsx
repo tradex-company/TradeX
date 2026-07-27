@@ -1,6 +1,6 @@
 import Logo from "./Logo";
 import TelegramButton from "./TelegramButton";
-import { TELEGRAM_USERNAME, HIGHLIGHT_QUOTE, GUARANTEE_TEXT } from "../constants";
+import { HIGHLIGHT_QUOTE, GUARANTEE_TEXT } from "../constants";
 import { ShieldCheck } from "lucide-react";
 
 export default function CTA() {
@@ -32,7 +32,7 @@ export default function CTA() {
           <div className="mt-6 sm:mt-8 flex justify-center px-2">
             <TelegramButton
               size="xl"
-              text={`Join @${TELEGRAM_USERNAME} on Telegram`}
+              text="Join TradeX on Telegram"
             />
           </div>
         </div>

@@ -1,5 +1,5 @@
 import Logo from "./Logo";
-import { TELEGRAM_USERNAME, TELEGRAM_URL, HIGHLIGHT_QUOTE, GUARANTEE_TEXT } from "../constants";
+import { TELEGRAM_URL, HIGHLIGHT_QUOTE, GUARANTEE_TEXT } from "../constants";
 
 export default function Footer() {
   return (
@@ -15,7 +15,7 @@ export default function Footer() {
               rel="noopener noreferrer"
               className="text-[#00ff66] underline font-black hover:opacity-80 transition-opacity"
             >
-              @{TELEGRAM_USERNAME}
+              TradeX Telegram
             </a>
           </p>
         </div>
@@ -23,7 +23,7 @@ export default function Footer() {
         <div className="text-xs text-center md:text-right">
           <p className="text-[#00ff66] font-extrabold italic">"{HIGHLIGHT_QUOTE}"</p>
           <p className="text-gray-400 font-medium mt-1">{GUARANTEE_TEXT}</p>
-          <p className="text-gray-500 mt-2">© {new Date().getFullYear()} TradeX (@{TELEGRAM_USERNAME}). All rights reserved.</p>
+          <p className="text-gray-500 mt-2">© {new Date().getFullYear()} TradeX. All rights reserved.</p>
         </div>
       </div>
     </footer>

@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { TELEGRAM_URL, TELEGRAM_USERNAME } from "../constants";
+import { TELEGRAM_URL } from "../constants";
 
 function TelegramIcon({ className }) {
   return (
@@ -12,7 +12,7 @@ function TelegramIcon({ className }) {
 export default function TelegramButton({
   size = "lg",
   fullWidth = false,
-  text = `Join @${TELEGRAM_USERNAME} on Telegram`,
+  text = "Join TradeX on Telegram",
   className = "",
 }) {
   const sizing =

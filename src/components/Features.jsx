@@ -20,7 +20,7 @@ const FEATURES = [
   {
     icon: Users,
     title: "Active Community",
-    desc: "Over 14,200 traders getting verified signal notifications daily.",
+    desc: "Over 7,600+ traders getting verified signal notifications daily.",
   },
 ];
 
