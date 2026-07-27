@@ -1,11 +1,11 @@
 import { Signal, ShieldCheck, LineChart, Users } from "lucide-react";
-import { TELEGRAM_USERNAME, GUARANTEE_TEXT, WIN_RATE_TEXT } from "../constants";
+import { TELEGRAM_USERNAME, GUARANTEE_TEXT } from "../constants";
 
 const FEATURES = [
   {
     icon: Signal,
-    title: "Daily Exclusive Signals",
-    desc: "Real-time Forex, Gold & Crypto setups posted directly to Telegram with exact entry, TP, and SL targets.",
+    title: "Daily VIP Signals",
+    desc: `Real-time Forex, Gold & Crypto entries posted directly to Telegram @${TELEGRAM_USERNAME} with exact entry, TP, and SL targets.`,
   },
   {
     icon: ShieldCheck,
@@ -14,12 +14,12 @@ const FEATURES = [
   },
   {
     icon: LineChart,
-    title: `${WIN_RATE_TEXT} Win Rate Analysis`,
+    title: "Market Analysis",
     desc: "In-depth technical market structure and institutional order flow breakdowns with every call.",
   },
   {
     icon: Users,
-    title: "Exclusive Community",
+    title: "Active Community",
     desc: "Over 14,200 traders getting verified signal notifications daily.",
   },
 ];
@@ -33,7 +33,7 @@ export default function Features() {
             Why Choose <span className="text-[#00ff66]">TradeX</span>
           </h2>
           <p className="text-sm sm:text-base text-gray-400 text-center mt-2 font-bold px-2">
-            Official Exclusive <span className="text-[#00ff66]">Telegram Channel</span>
+            Official Telegram: <span className="text-[#00ff66]">@{TELEGRAM_USERNAME}</span>
           </p>
         </div>
 

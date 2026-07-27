@@ -1,12 +1,13 @@
 import { motion } from "framer-motion";
 import { Star, ShieldCheck, CheckCircle2, Quote } from "lucide-react";
+import { TELEGRAM_USERNAME } from "../constants";
 
 const TESTIMONIALS = [
   {
     name: "Alexander M.",
     location: "London, UK",
     profit: "+$3,420 Profit in 24 Days",
-    comment: "The 30-day profitability guarantee gave me the confidence to join. I was up 34% in my first month following TradeX signals strictly!",
+    comment: "The 30-day profitability guarantee gave me the confidence to join. I was up 34% in my first month following @Tradexbyabhi signals strictly!",
     rating: 5,
     pair: "Gold & Forex",
   },
@@ -43,7 +44,7 @@ export default function Testimonials() {
             Traders Making Real <span className="text-[#00ff66]">Profits Daily</span>
           </h2>
           <p className="mt-3 text-gray-300">
-            Real feedback from verified Exclusive Group members.
+            Real feedback from members on Telegram handle <span className="text-[#00ff66] font-bold">@{TELEGRAM_USERNAME}</span>.
           </p>
         </div>
 

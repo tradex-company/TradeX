@@ -2,10 +2,10 @@ import { useEffect, useRef, useState } from "react";
 import { motion, useInView, animate } from "framer-motion";
 
 const STATS = [
-  { to: 14200, suffix: "+", label: "Active Members" },
-  { to: 95, suffix: "%+", label: "Verified Win Rate" },
-  { to: 30, suffix: " Days", label: "Full Refund Pledge" },
-  { to: 4850, suffix: "+", label: "Monthly Pips" },
+  { to: 5000, suffix: "+", label: "Members" },
+  { to: 95, suffix: "%", label: "Accuracy" },
+  { to: 24, suffix: "/7", label: "Support" },
+  { to: 1000, suffix: "+", label: "Trades" },
 ];
 
 function Counter({ to, suffix, duration = 2 }) {

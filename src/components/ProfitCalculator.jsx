@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { Calculator, ShieldCheck, DollarSign, ArrowRight, Zap, CheckCircle } from "lucide-react";
-import { GUARANTEE_TEXT } from "../constants";
+import { TELEGRAM_USERNAME, GUARANTEE_TEXT } from "../constants";
 import TelegramButton from "./TelegramButton";
 
 export default function ProfitCalculator() {
@@ -120,7 +120,7 @@ export default function ProfitCalculator() {
             <TelegramButton
               fullWidth
               size="lg"
-              text="Start Trading Now"
+              text={`Start Trading @${TELEGRAM_USERNAME}`}
             />
           </div>
 

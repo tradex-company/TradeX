@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { TELEGRAM_URL } from "../constants";
+import { TELEGRAM_URL, TELEGRAM_USERNAME } from "../constants";
 
 function TelegramIcon({ className }) {
   return (
@@ -12,7 +12,7 @@ function TelegramIcon({ className }) {
 export default function TelegramButton({
   size = "lg",
   fullWidth = false,
-  text = "Join Exclusive Group",
+  text = `Join @${TELEGRAM_USERNAME} on Telegram`,
   className = "",
 }) {
   const sizing =
@@ -29,7 +29,7 @@ export default function TelegramButton({
       rel="noopener noreferrer"
       whileHover={{ scale: 1.04, y: -2 }}
       whileTap={{ scale: 0.96 }}
-      className={`inline-flex ${fullWidth ? "w-full justify-center" : ""} items-center ${sizing} rounded-xl font-extrabold text-black bg-[#00ff66] hover:bg-[#10b981] transition-all duration-200 cursor-pointer border-2 border-[#00ff66] ${className}`}
+      className={`inline-flex ${fullWidth ? "w-full justify-center" : ""} items-center ${sizing} rounded-xl font-extrabold text-black bg-[#00ff66] hover:bg-[#10b981] shadow-[0_0_25px_rgba(0,255,102,0.5)] transition-all duration-200 cursor-pointer border-2 border-[#00ff66] ${className}`}
     >
       <TelegramIcon className="w-5 h-5 sm:w-6 sm:h-6 shrink-0 fill-black text-black" />
       <span className="tracking-tight text-black whitespace-nowrap">{text}</span>

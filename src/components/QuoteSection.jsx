@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Quote, AlertTriangle, CheckCircle, XCircle, BookOpen, Sparkles } from "lucide-react";
-import { HIGHLIGHT_QUOTE } from "../constants";
+import { HIGHLIGHT_QUOTE, TELEGRAM_USERNAME } from "../constants";
 import TelegramButton from "./TelegramButton";
 
 export default function QuoteSection() {
@@ -13,11 +13,11 @@ export default function QuoteSection() {
         "Fake screenshot hype with no historical proof",
         "Zero money-back or refund accountability",
       ],
-      goodTitle: "TradeX Exclusive Group",
+      goodTitle: `TradeX Knowledge (@${TELEGRAM_USERNAME})`,
       goodItems: [
         "Strict 1-2% position sizing & institutional SL",
         "Full technical breakdown & chart analysis",
-        "Proven 95%+ verified win rate across 4,800+ pips",
+        "Proven 95% verified win rate across 14,200+ pips",
         "100% Full Refund if not profitable in 30 days",
       ],
     },
@@ -26,7 +26,7 @@ export default function QuoteSection() {
   return (
     <section id="quote" className="relative py-24 px-4 sm:px-6 lg:px-8 bg-[#020403] border-t border-[#00ff66]/10">
       <div className="max-w-6xl mx-auto">
-        
+
         {/* Featured Quote Box */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -116,7 +116,7 @@ export default function QuoteSection() {
         <div className="text-center">
           <TelegramButton
             size="lg"
-            text="Get Knowledge-Driven Signals"
+            text={`Get Knowledge-Driven Signals @${TELEGRAM_USERNAME}`}
           />
         </div>
 
