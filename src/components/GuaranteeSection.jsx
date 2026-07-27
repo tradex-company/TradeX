@@ -1,14 +1,14 @@
 import { motion } from "framer-motion";
 import { ShieldCheck, RotateCcw, CheckCircle2, DollarSign, Lock, Award } from "lucide-react";
 import TelegramButton from "./TelegramButton";
-import { TELEGRAM_USERNAME, GUARANTEE_TEXT } from "../constants";
+import { GUARANTEE_TEXT } from "../constants";
 
 export default function GuaranteeSection() {
   const guaranteeSteps = [
     {
       step: "01",
-      title: "Join TradeX VIP Telegram",
-      desc: `Connect directly to @${TELEGRAM_USERNAME} to receive live Forex, Gold & Crypto entries with exact TP/SL levels.`,
+      title: "Join TradeX Exclusive Group",
+      desc: "Connect directly to Telegram to receive live Forex, Gold & Crypto entries with exact TP/SL levels.",
       icon: Lock,
     },
     {
@@ -95,8 +95,7 @@ export default function GuaranteeSection() {
               </h3>
 
               <p className="mt-2 sm:mt-4 text-sm sm:text-base text-gray-400 leading-relaxed">
-                If after 30 days of trading our verified signals from Telegram{" "}
-                <span className="text-[#00ff66] font-bold">@{TELEGRAM_USERNAME}</span> you don't see net profit, contact our support for a 100% refund. No questions asked.
+                If after 30 days of trading our verified signals from Telegram you don't see net profit, contact our support for a 100% refund. No questions asked.
               </p>
             </div>
 
@@ -142,7 +141,7 @@ export default function GuaranteeSection() {
         <div className="text-center">
           <TelegramButton
             size="lg"
-            text={`Claim Risk-Free Access @${TELEGRAM_USERNAME}`}
+            text="Claim Risk-Free Access"
           />
         </div>
 

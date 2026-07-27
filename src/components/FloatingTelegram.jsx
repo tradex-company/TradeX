@@ -1,4 +1,4 @@
-import { TELEGRAM_URL, TELEGRAM_USERNAME } from "../constants";
+import { TELEGRAM_URL } from "../constants";
 
 function TelegramIcon({ className }) {
   return (
@@ -18,7 +18,7 @@ export default function FloatingTelegram() {
     >
       <TelegramIcon className="w-4 h-4 sm:w-5 sm:h-5 fill-black shrink-0" />
       <span className="text-xs sm:text-sm font-black tracking-tight text-black whitespace-nowrap">
-        @{TELEGRAM_USERNAME}
+        Join Exclusive Group
       </span>
     </a>
   );

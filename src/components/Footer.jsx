@@ -8,14 +8,14 @@ export default function Footer() {
         <div>
           <Logo size={32} showWordmark={true} />
           <p className="mt-2 text-xs text-white font-bold max-w-sm mx-auto md:mx-0">
-            Official Telegram:{" "}
+            Official Channel:{" "}
             <a
               href={TELEGRAM_URL}
               target="_blank"
               rel="noopener noreferrer"
               className="text-[#00ff66] underline font-black hover:opacity-80 transition-opacity"
             >
-              @{TELEGRAM_USERNAME}
+              Join Exclusive Group
             </a>
           </p>
         </div>
@@ -23,7 +23,7 @@ export default function Footer() {
         <div className="text-xs text-center md:text-right">
           <p className="text-[#00ff66] font-extrabold italic">"{HIGHLIGHT_QUOTE}"</p>
           <p className="text-gray-400 font-medium mt-1">{GUARANTEE_TEXT}</p>
-          <p className="text-gray-500 mt-2">© {new Date().getFullYear()} TradeX (@{TELEGRAM_USERNAME}). All rights reserved.</p>
+          <p className="text-gray-500 mt-2">© {new Date().getFullYear()} TradeX Exclusive Group. All rights reserved.</p>
         </div>
       </div>
     </footer>

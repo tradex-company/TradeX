@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronDown, HelpCircle, ShieldCheck } from "lucide-react";
-import { TELEGRAM_USERNAME, GUARANTEE_TEXT, HIGHLIGHT_QUOTE } from "../constants";
+import { GUARANTEE_TEXT, HIGHLIGHT_QUOTE } from "../constants";
 
 const FAQS = [
   {
@@ -9,8 +9,8 @@ const FAQS = [
     a: GUARANTEE_TEXT + " Simply follow our daily signals posted on Telegram and strictly adhere to the recommended 1-2% risk parameters. If your account is not net profitable after 30 days, reach out for an instant 100% refund.",
   },
   {
-    q: `What is the official Telegram channel handle?`,
-    a: `Our only official Telegram username is @${TELEGRAM_USERNAME}. Always verify you are in the official group to avoid impersonators.`,
+    q: "How do I access the official Telegram group?",
+    a: "Click any 'Join Exclusive Group' button on our website to be redirected directly to our official group.",
   },
   {
     q: "Why do you emphasize 'Free tips can be the most expensive mistake'?",
@@ -42,7 +42,7 @@ export default function FAQ() {
           <h2 className="text-3xl sm:text-5xl font-black text-white">
             Frequently Asked <span className="text-[#00ff66]">Questions</span>
           </h2>
-          <p className="mt-3 text-gray-300">Everything you need to know before joining @{TELEGRAM_USERNAME}.</p>
+          <p className="mt-3 text-gray-300">Everything you need to know before joining.</p>
         </div>
 
         <div className="space-y-4">

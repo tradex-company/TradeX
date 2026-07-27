@@ -1,7 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import { TrendingUp, CheckCircle, Clock, ArrowUpRight, Zap, Target } from "lucide-react";
-import { TELEGRAM_USERNAME } from "../constants";
 
 const ASSETS = [
   { id: "XAUUSD", name: "GOLD / XAUUSD", price: "$2,386.40", pips: "+145 Pips", tp: "TP2 HIT", status: "WIN" },
@@ -129,7 +128,7 @@ export default function TradingSimulator() {
             Institutional Signal <span className="text-[#00ff66]">Execution Engine</span>
           </h2>
           <p className="mt-2 sm:mt-3 text-sm sm:text-base text-gray-400 px-2">
-            Every trade posted on Telegram <span className="text-[#00ff66] font-bold">@{TELEGRAM_USERNAME}</span> comes with entry, TP, and SL.
+            Every trade posted on Telegram comes with entry, TP, and SL.
           </p>
         </div>
 
@@ -202,7 +201,7 @@ export default function TradingSimulator() {
             </div>
             <div className="p-3 sm:p-4 rounded-xl bg-[#0a1b10] border border-[#00ff66]/20 shadow-[0_0_15px_rgba(0,255,102,0.1)]">
               <span className="text-xs text-gray-400 block font-medium">TELEGRAM</span>
-              <span className="text-lg sm:text-xl font-black text-white">@{TELEGRAM_USERNAME}</span>
+              <span className="text-lg sm:text-xl font-black text-white">OFFICIAL GROUP</span>
             </div>
           </div>
 
