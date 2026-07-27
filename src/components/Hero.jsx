@@ -2,24 +2,11 @@ import { motion } from "framer-motion";
 import Logo from "./Logo";
 import TelegramButton from "./TelegramButton";
 import { HIGHLIGHT_QUOTE, GUARANTEE_TEXT, WIN_RATE_TEXT } from "../constants";
-import { ShieldCheck, Quote, Sparkles, TrendingUp, CheckCircle2, Award } from "lucide-react";
+import { ShieldCheck, Quote, TrendingUp, CheckCircle2, Award } from "lucide-react";
 
 export default function Hero() {
   return (
     <section className="relative min-h-screen flex items-center justify-center py-6 sm:py-12 px-4 sm:px-6 lg:px-8 bg-[#000000] overflow-hidden">
-
-      {/* Static grid background */}
-      <div
-        className="absolute inset-0 pointer-events-none z-0 opacity-40"
-        style={{
-          backgroundImage:
-            "linear-gradient(rgba(0,255,102,0.08) 1px, transparent 1px), linear-gradient(90deg, rgba(0,255,102,0.08) 1px, transparent 1px)",
-          backgroundSize: "40px 40px",
-        }}
-      />
-
-      {/* Ambient background glows */}
-      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] sm:w-[500px] h-[300px] sm:h-[500px] bg-[#00ff66]/10 rounded-full blur-[100px] pointer-events-none" />
 
       <div className="relative z-10 max-w-4xl mx-auto flex flex-col items-center text-center w-full pt-2 sm:pt-4">
 
@@ -38,20 +25,10 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           className="text-3xl sm:text-5xl md:text-6xl font-black text-white tracking-tight leading-tight"
         >
-          TRADEX <span className="text-[#00ff66] drop-shadow-[0_0_20px_rgba(0,255,102,0.5)]">EXCLUSIVE GROUP</span>
+          TRADEX <span className="text-[#00ff66]">EXCLUSIVE GROUP</span>
         </motion.h1>
 
-        {/* Subtitle */}
-        {/* <motion.p
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.05 }}
-          className="mt-1.5 text-xs sm:text-lg text-gray-300 font-medium max-w-xl"
-        >
-          Institutional Forex, Gold & Crypto Signals Delivered Daily.
-        </motion.p> */}
-
-        {/* 🌟 TELEGRAM JOIN BUTTON DIRECTLY BELOW MAIN HEADING & SUBTITLE 🌟 */}
+        {/* 🌟 TELEGRAM JOIN BUTTON DIRECTLY BELOW MAIN HEADING 🌟 */}
         <motion.div
           initial={{ opacity: 0, scale: 0.95, y: 10 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
@@ -73,7 +50,7 @@ export default function Hero() {
           className="mt-4 sm:mt-6 w-full max-w-3xl grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 text-left"
         >
           {/* CONTENT 1: EXCLUSIVE GROUP & 95%+ WIN RATE */}
-          <div className="relative rounded-xl bg-gradient-to-br from-[#06180c] via-[#031107] to-[#010803] border-2 border-[#00ff66] p-4 sm:p-5 shadow-[0_0_25px_rgba(0,255,102,0.25)] flex flex-col justify-between">
+          <div className="relative rounded-xl bg-[#031107] border-2 border-[#00ff66] p-4 sm:p-5 flex flex-col justify-between">
             <div>
               <div className="flex items-center justify-between mb-2">
                 <div className="p-2 rounded-lg bg-[#00ff66] text-black font-black">
@@ -97,7 +74,7 @@ export default function Hero() {
           </div>
 
           {/* CONTENT 2: 30 DAYS FULL REFUND GUARANTEE */}
-          <div className="relative rounded-xl bg-gradient-to-br from-[#0a1f10] via-[#05150a] to-[#020a04] border-2 border-[#00ff66] p-4 sm:p-5 shadow-[0_0_25px_rgba(0,255,102,0.3)] flex flex-col justify-between">
+          <div className="relative rounded-xl bg-[#05150a] border-2 border-[#00ff66] p-4 sm:p-5 flex flex-col justify-between">
             <div>
               <div className="flex items-center justify-between mb-2">
                 <div className="p-2 rounded-lg bg-[#00ff66] text-black font-black">
@@ -130,7 +107,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 15 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2 }}
-          className="mt-4 sm:mt-6 w-full max-w-3xl bg-[#061008] border border-[#00ff66]/40 rounded-xl p-3.5 sm:p-5 text-left shadow-[0_0_20px_rgba(0,255,102,0.15)]"
+          className="mt-4 sm:mt-6 w-full max-w-3xl bg-[#061008] border border-[#00ff66]/40 rounded-xl p-3.5 sm:p-5 text-left"
         >
           <div className="flex items-start gap-3">
             <div className="p-2 rounded-lg bg-[#00ff66]/20 text-[#00ff66] shrink-0 font-black border border-[#00ff66]/40">
@@ -155,7 +132,7 @@ export default function Hero() {
             { value: "+4,850", label: "Monthly Pips" },
             { value: "14,200+", label: "Members" },
           ].map(({ value, label }) => (
-            <div key={label} className="p-2.5 sm:p-3 rounded-lg bg-[#080808] border border-[#00ff66]/60 text-center shadow-[0_0_12px_rgba(0,255,102,0.1)]">
+            <div key={label} className="p-2.5 sm:p-3 rounded-lg bg-[#080808] border border-[#00ff66]/60 text-center">
               <div className="text-base sm:text-xl font-black text-[#00ff66]">{value}</div>
               <div className="text-[10px] sm:text-xs text-white font-bold mt-0.5">{label}</div>
             </div>
