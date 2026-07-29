@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import Logo from "./Logo";
 import TelegramButton from "./TelegramButton";
-import { HIGHLIGHT_QUOTE, GUARANTEE_TEXT } from "../constants";
+import { HIGHLIGHT_QUOTE, GUARANTEE_TEXT, TELEGRAM_USERNAME } from "../constants";
 import { ShieldCheck, Quote } from "lucide-react";
 
 export default function Hero() {
@@ -56,7 +56,7 @@ export default function Hero() {
         >
           <TelegramButton
             size="xl"
-            text="Join TradeX on Telegram"
+            text={`Join @${TELEGRAM_USERNAME} on Telegram`}
           />
         </motion.div>
 
@@ -115,7 +115,7 @@ export default function Hero() {
           {[
             { value: "95%", label: "Win Rate" },
             { value: "+4,850", label: "Monthly Pips" },
-            { value: "14,200+", label: "Active Traders" },
+            { value: "7,600+", label: "Active Traders" },
             { value: "30 DAYS", label: "Refund Pledge" },
           ].map(({ value, label }) => (
             <div key={label} className="p-4 rounded-xl bg-[#080808] border border-[#00ff66] text-center">
